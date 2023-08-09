@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Membuat function javascript </h1>
+
+    <button id="tombol" onclick="ct()"> HALO YAL </button>
+
+    
+    <br><br>
+
+    <button id="tambah" onclick="tambah()"> Tambah </button>
+    <button id="kurang" onclick="kurang()"> Kurang </button>
+    <div id="the"></div>
+
+    <script>
+
+        var angka = 10;
+        var hasil = "";
+
+        document.getElementById("the").innerHTML = "Angka sekarang " + angka;
+
+        function ct() {
+            document.getElementById("tombol").innerHTML = "Halo Lay";
+        }
+
+        function tambah() {
+            angka =  angka + 1;
+            document.getElementById("the").innerHTML = "Angka sekarang " + angka;
+            
+        }
+
+        function kurang() {
+            angka =  angka - 1;
+            document.getElementById("the").innerHTML = "Angka sekarang " + angka;
+        }
+
+    </script>
+
+</body>
+</html>

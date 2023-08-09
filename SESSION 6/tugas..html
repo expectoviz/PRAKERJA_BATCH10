@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tugas Mandiri 6</title>
+
+</head>
+
+<body>
+
+    <p class="paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quo quaerat recusandae qui ullam eaque cumque ea fugit,
+        debitis commodi ipsum illo dolorum consequatur sed laudantium suscipit quis magni,
+        maiores in?</p>
+
+    <p class="paragraf2">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quo quaerat recusandae qui ullam eaque cumque ea fugit,
+        debitis commodi ipsum illo dolorum consequatur sed laudantium suscipit quis magni,
+        maiores in?</p>
+
+    <p class="paragraf3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quo quaerat recusandae qui ullam eaque cumque ea fugit,
+        debitis commodi ipsum illo dolorum consequatur sed laudantium suscipit quis magni,
+        maiores in?</p>
+
+    <script>
+        var interval, waktu;
+        var paragraphs = document.getElementsByTagName("p");
+
+        gantiteks();
+
+        function gantiteks() {
+            interval = setInterval(myFunction, 500);
+            waktu = setTimeout(reset, 5000);
+        }
+
+        function reset() {
+            if (interval) {
+                clearInterval(interval);
+                console.log("Clear interval");
+            }
+            if (waktu) {
+                clearInterval(waktu);
+                console.log("Clear timeout");
+                for (var i = 0; i < paragraphs.length; i++) {
+                    paragraphs[i].style.color = "black";
+                }
+            }
+        }
+
+        function myFunction() {
+            for (var i = 0; i < paragraphs.length; i++) {
+                if (paragraphs[i].style.color != "black") {
+                    paragraphs[i].style.color = "black";
+                } else {
+                    paragraphs[i].style.color = getColor(i);
+                }
+            }
+        }
+
+        function getColor(index) {
+            if (index === 0) {
+                return "red";
+            } else if (index === 1) {
+                return "green";
+            } else if (index === 2) {
+                return "blue";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

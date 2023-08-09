@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2> Sinau </h2>
+    <input type="color" id="warna">
+    <input type="color" id="bag">
+    
+    <script>
+        var bgcolor = document.getElementById('bag');
+        var tulis = document.getElementById('warna');
+
+        bgcolor.addEventListener("change", (event) => {
+            document.body.style.backgroundColor = bgcolor.value;
+        });
+
+        tulis.addEventListener("change", (event) => {
+            document.body.style.color = tulis.value;
+        });
+
+
+    </script>
+
+</body>
+</html>
